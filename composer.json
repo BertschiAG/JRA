@@ -1,0 +1,32 @@
+{
+  "name": "BertschiAG/JoomlaRestAPI",
+  "description": "A library to connect to the Joomla Rest API (cAPI) from https://www.annatech.com/.",
+  "keywords": [
+    "",
+    "",
+    ""
+  ],
+  "homepage": "http://www.bertschi.com/",
+  "type": "library",
+  "license": "LGPL-3.0",
+  "authors": [
+    {
+      "name": "Janik Baumann",
+      "email": "janik.baumann@bertschi.com"
+    }
+  ],
+  "support": {
+    "email": "intranet@bertschi.com",
+    "issues": "https://github.com/BertschiAG/JoomlaRestAPI/issues",
+    "wiki": "https://github.com/BertschiAG/JoomlaRestAPI/wiki"
+  },
+  "require": {
+    "php": ">=5.3.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "JoomlaCAPI\\": "src/"
+    }
+  },
+  "minimum-stability": "stable"
+}
