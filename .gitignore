@@ -1,4 +1,8 @@
+# Files
+composer.lock
 composer.phar
+
+# Directories
 vendor/
 .idea/
 
