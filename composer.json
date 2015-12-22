@@ -1,5 +1,5 @@
 {
-  "name": "BertschiAG/JoomlaRestAPI",
+  "name": "bertschi/joomla-rest-api",
   "description": "A library to connect to the Joomla Rest API (cAPI) from https://www.annatech.com/.",
   "keywords": [
     "",
