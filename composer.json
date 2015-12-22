@@ -2,9 +2,17 @@
   "name": "bertschi/joomla-rest-api",
   "description": "A library to connect to the Joomla Rest API (cAPI) from https://www.annatech.com/.",
   "keywords": [
-    "",
-    "",
-    ""
+    "joomla",
+    "rest",
+    "api",
+    "bertschi",
+    "bertschiag",
+    "annatech",
+    "janik baumann",
+    "php",
+    "connection",
+    "call",
+    "connector"
   ],
   "homepage": "http://www.bertschi.com/",
   "type": "library",
