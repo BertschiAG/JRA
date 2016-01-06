@@ -11,6 +11,7 @@
 namespace JRA\Responsibilities\Responsible;
 
 
+use JRA\Config\Authenticate;
 use JRA\Factories\InternalFactory;
 
 use JRA\Interfaces\ConfigInterface;
@@ -27,6 +28,9 @@ class HeaderTokenLogin extends AbstractLoginHandler
      */
     protected function process(ConfigInterface $pConfig, InternalFactory $pInternalFactory)
     {
+        if ($pConfig->getAuthenticationMethod() === Authenticate::AUTH_METHOD_HEADER_TOKEN) {
+            return true;
+        }
         return false;
     }
 }
