@@ -3,21 +3,26 @@
  * Created by PhpStorm.
  * Copyright: Bertschi AG, 2016
  * User: jbaumann
- * File: CAPIResponseObject.php
- * Date: 12.01.2016
- * Time: 09:46
+ * File: UserLogoutResponseObject.php
+ * Date: 20.01.2016
+ * Time: 16:34
  */
 
 namespace JRA\Objects;
 
 
-class CAPIResponseObject
+class UserLogoutResponseObject
 {
 
     /**
      * @var string
      */
     private $_msg;
+
+    /**
+     * @var string
+     */
+    private $_jResponse;
 
     /**
      * @var string
@@ -30,7 +35,7 @@ class CAPIResponseObject
     private $_status;
 
     /**
-     * CAPIResponseObject constructor.
+     * UserLogoutResponseObject constructor.
      *
      * @param string $pResponse
      */
@@ -38,6 +43,7 @@ class CAPIResponseObject
     {
         $object = json_decode($pResponse);
         $this->_msg = $object->msg;
+        $this->_jResponse = $object->jresponse;
         $this->_error = $object->error;
         $this->_status = $object->status;
     }
@@ -48,6 +54,14 @@ class CAPIResponseObject
     public function getMsg()
     {
         return $this->_msg;
+    }
+
+    /**
+     * @return string
+     */
+    public function getJResponse()
+    {
+        return $this->_jResponse;
     }
 
     /**
