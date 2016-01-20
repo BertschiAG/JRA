@@ -13,13 +13,27 @@ namespace JRA\Factories;
 
 class InternalFactory
 {
+
+    /**
+     * @var ChainFactory
+     */
     private $_chainFactory;
+
+    /**
+     * @var GuzzleFactory
+     */
     private $_guzzleFactory;
+
+    /**
+     * @var CommandFactory
+     */
+    private $_commandFactory;
 
     public function __construct()
     {
         $this->_chainFactory = new ChainFactory();
         $this->_guzzleFactory = new GuzzleFactory();
+        $this->_commandFactory = new CommandFactory($this);
     }
 
     /**
@@ -36,5 +50,13 @@ class InternalFactory
     public function getGuzzleFactory()
     {
         return $this->_guzzleFactory;
+    }
+
+    /**
+     * @return CommandFactory
+     */
+    public function getCommandFactory()
+    {
+        return $this->_commandFactory;
     }
 }

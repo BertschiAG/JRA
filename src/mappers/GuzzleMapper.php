@@ -16,15 +16,33 @@ use JRA\Interfaces\ConfigInterface;
 
 class GuzzleMapper
 {
+    /**
+     * @var ConfigInterface
+     */
     private $_config;
+
+    /**
+     * @var \GuzzleHttp\Client
+     */
     private $_guzzleClientObject;
 
+    /**
+     * GuzzleMapper constructor.
+     * @param ConfigInterface $pConfig
+     */
     public function __construct(ConfigInterface $pConfig)
     {
         $this->_config = $pConfig;
         $this->_guzzleClientObject = GuzzleFactory::getHttpClientObject();
     }
 
+    /**
+     * @param $pPath
+     * @param string $pType
+     * @param array $headers
+     * @param array $options
+     * @return \Psr\Http\Message\ResponseInterface
+     */
     public function guzzleRequest($pPath, $pType = 'GET', $headers = [], $options = [])
     {
         foreach ($headers as $pKey => $pValue) {

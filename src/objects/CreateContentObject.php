@@ -30,6 +30,8 @@ class CreateContentObject implements CreateContentObjectInterface
     private $_rights;
     private $_xReference;
 
+    private $_requestParams;
+
     public function __construct($pTitle, $pIntroText, $pFullText, $pCatId, $pState, $pAccess, $pLanguage)
     {
         $this->_title = $pTitle;
@@ -191,5 +193,26 @@ class CreateContentObject implements CreateContentObjectInterface
     public function setXReference($pXReference)
     {
         $this->_xReference = $pXReference;
+    }
+
+    /**
+     * @return array
+     */
+    public function getRequestParams()
+    {
+        return [
+            'title' => $this->getTitle(),
+            'introtext' => $this->getIntroText(),
+            'fulltext' => $this->getFullText(),
+            'catid' => $this->getCatId(),
+            'created_by_alias' => $this->getCreatedByAlias(),
+            'state' => $this->getState(),
+            'access' => $this->getAccess(),
+            'robots' => $this->getRobots(),
+            'author' => $this->getAuthor(),
+            'rights' => $this->getRights(),
+            'xreference' => $this->getXReference(),
+            'language' => $this->getLanguage(),
+        ];
     }
 }

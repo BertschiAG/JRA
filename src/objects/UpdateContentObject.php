@@ -22,6 +22,7 @@ class UpdateContentObject implements UpdateContentObjectInterface
     private $_state;
     private $_access;
     private $_language;
+
     private $_alias;
     private $_createdByAlias;
     private $_robots;
@@ -235,5 +236,26 @@ class UpdateContentObject implements UpdateContentObjectInterface
     public function setXReference($pXReference)
     {
         $this->_xReference = $pXReference;
+    }
+
+    /**
+     * @return array
+     */
+    public function getRequestParams()
+    {
+        $response = [];
+        (empty($this->getTitle())) ?: $response['title'] = $this->getTitle();
+        (empty($this->getIntroText())) ?: $response['introtext'] = $this->getIntroText();
+        (empty($this->getFullText())) ?: $response['fulltext'] = $this->getFullText();
+        (empty($this->getCatId())) ?: $response['catid'] = $this->getCatId();
+        (empty($this->getCreatedByAlias())) ?: $response['created_by_alias'] = $this->getCreatedByAlias();
+        (empty($this->getState())) ?: $response['state'] = $this->getState();
+        (empty($this->getAccess())) ?: $response['access'] = $this->getAccess();
+        (empty($this->getRobots())) ?: $response['robots'] = $this->getRobots();
+        (empty($this->getAuthor())) ?: $response['author'] = $this->getAuthor();
+        (empty($this->getRights())) ?: $response['rights'] = $this->getRights();
+        (empty($this->getXReference())) ?: $response['xreference'] = $this->getXReference();
+        (empty($this->getLanguage())) ?: $response['language'] = $this->getLanguage();
+        return $response;
     }
 }

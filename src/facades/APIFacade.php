@@ -11,10 +11,13 @@
 namespace JRA\Facades;
 
 
+use JRA\Commands\Routes\ContentRoutes;
+use JRA\Commands\Routes\UserRoutes;
 use JRA\Factories\InternalFactory;
 use JRA\FrontFactory;
 use JRA\Interfaces\APIInterface;
 use JRA\Interfaces\ConfigInterface;
+use JRA\Objects\SessionResponseObject;
 use stdClass;
 
 class APIFacade implements APIInterface
@@ -54,9 +57,18 @@ class APIFacade implements APIInterface
         // TODO: Implement logout() method.
     }
 
+    /**
+     * @return SessionResponseObject
+     */
     public function getSessions()
     {
-        // TODO: Implement getSessions() method.
+        $userCommand = $this->_internalFactory
+            ->getCommandFactory()
+            ->getUserCommand($this->_config);
+        $userCommand
+            ->setMethodRoute(UserRoutes::GET_USER_SESSIONS);
+        $userCommand->run();
+        return new SessionResponseObject($userCommand->getContents());
     }
 
     public function updateProfile()
