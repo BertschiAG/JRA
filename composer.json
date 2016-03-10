@@ -1,5 +1,5 @@
 {
-  "name": "bertschi/joomla-rest-api",
+  "name": "bertschi/jra",
   "homepage": "http://www.bertschi.com/",
   "description": "A library to connect to the Joomla Rest API (cAPI) from https://www.annatech.com/.",
   "type": "library",
@@ -13,11 +13,16 @@
   ],
   "require": {
     "php": ">=5.3.5",
-    "guzzlehttp/guzzle": "6.1.1"
+    "guzzle/guzzle": "v3.9.3"
   },
   "autoload": {
     "psr-4": {
-      "JRA\\": "src/"
+      "JRA\\": "src/JRA"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "JRA\\": "tests/JRA/"
     }
   },
   "support": {

@@ -1,6 +1,7 @@
 # Files
 composer.lock
 composer.phar
+Configuration.php
 
 # Directories
 vendor/
