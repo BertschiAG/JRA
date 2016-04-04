@@ -24,6 +24,6 @@ class ContentRoutes
     const GET_CONTENT_SINGLE_ID = 'content/single/:id';
     const POST_CONTENT_CREATE = 'content/create';
     const DELETE_CONTENT_ID = 'content/delete/:id';
-    const PUT_CONTENT_UPDATE_ID = 'content/update/:id';
+    const POST_CONTENT_UPDATE_ID = 'content/update/:id';
 
 }

@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * Copyright: Bertschi AG, 2016
  * User: jbaumann
- * File: PutContentUpdateId.php
+ * File: PostContentUpdateId.php
  * Date: 18.01.2016
  * Time: 11:59
  */
@@ -15,7 +15,7 @@ use JRA\Abstracts\AbstractMethod;
 use JRA\Factories\InternalFactory;
 use JRA\Interfaces\ConfigInterface;
 
-class PutContentUpdateId extends AbstractMethod
+class PostContentUpdateId extends AbstractMethod
 {
 
     /**

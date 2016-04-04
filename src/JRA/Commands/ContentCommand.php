@@ -22,7 +22,7 @@ use JRA\Commands\Methods\Content\GetContentFields;
 use JRA\Commands\Methods\Content\GetContentListAll;
 use JRA\Commands\Methods\Content\GetContentSingleId;
 use JRA\Commands\Methods\Content\PostContentCreate;
-use JRA\Commands\Methods\Content\PutContentUpdateId;
+use JRA\Commands\Methods\Content\PostContentUpdateId;
 use JRA\Commands\Routes\ContentRoutes;
 use JRA\Exceptions\CommandException;
 
@@ -98,9 +98,9 @@ class ContentCommand extends AbstractCommand
                 $method->setMethodRoute(ContentRoutes::DELETE_CONTENT_ID);
                 $this->_setMethod($method);
                 break;
-            case ContentRoutes::PUT_CONTENT_UPDATE_ID:
-                $method = new PutContentUpdateId($this->_config, $this->_factory);
-                $method->setMethodRoute(ContentRoutes::PUT_CONTENT_UPDATE_ID);
+            case ContentRoutes::POST_CONTENT_UPDATE_ID:
+                $method = new PostContentUpdateId($this->_config, $this->_factory);
+                $method->setMethodRoute(ContentRoutes::POST_CONTENT_UPDATE_ID);
                 $this->_setMethod($method);
                 break;
             default:

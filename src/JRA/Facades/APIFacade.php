@@ -276,7 +276,7 @@ class APIFacade
 
         $contentCommand = $this->_internalFactory
             ->getCommandFactory()
-            ->getContentCommand($this->_config, ContentRoutes::PUT_CONTENT_UPDATE_ID, $params);
+            ->getContentCommand($this->_config, ContentRoutes::POST_CONTENT_UPDATE_ID, $params);
         $contentCommand->run();
         return new MsgResponseObject($contentCommand->getContents());
     }
