@@ -137,7 +137,7 @@ abstract class AbstractCommand
             ->getGuzzleHandler()
             ->$httpMethod(
                 $this->getParsedUrl(),
-                (($httpMethod === 'POST') ? $this->getAdditionalArguments() : null)
+                (($httpMethod === 'POST' || $httpMethod === 'PUT') ? $this->getAdditionalArguments() : null)
             )
             ->getBody(true);
 
@@ -183,7 +183,7 @@ abstract class AbstractCommand
             unset($additionalArguments[$pValue]);
         }
 
-        if (!empty($additionalArguments) && $this->getHttpMethod() !== 'POST') {
+        if (!empty($additionalArguments) && $this->getHttpMethod() !== 'POST' && $this->getHttpMethod() !== 'PUT') {
             $route .= '?';
             foreach ($additionalArguments as $pKey => $pValue) {
                 $route .= urlencode($pKey) . '=' . urlencode($pValue) . '&';
