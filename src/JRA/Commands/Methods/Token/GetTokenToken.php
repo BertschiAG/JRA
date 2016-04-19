@@ -31,6 +31,8 @@ class GetTokenToken extends AbstractMethod
     }
 
     /**
+     * The methods need to check addition arguments by itself.
+     *
      * @return boolean
      */
     protected function _checkArguments()

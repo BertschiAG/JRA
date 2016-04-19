@@ -22,11 +22,15 @@ class ContentFieldsResponseObject
     private $_fields;
 
     /**
+     * If an error occurred.
+     *
      * @var string
      */
     private $_error;
 
     /**
+     * Status of the request.
+     *
      * @var string
      */
     private $_status;
@@ -34,7 +38,7 @@ class ContentFieldsResponseObject
     /**
      * ContentFieldsResponseObject constructor.
      *
-     * @param string $pResponse
+     * @param string $pResponse The response of the request.
      */
     public function __construct($pResponse)
     {
@@ -47,6 +51,8 @@ class ContentFieldsResponseObject
     }
 
     /**
+     * Returns all data field objects of the response.
+     *
      * @return DatabaseFieldObject[]
      */
     public function getFields()
@@ -55,6 +61,8 @@ class ContentFieldsResponseObject
     }
 
     /**
+     * Returns if an error occurred.
+     *
      * @return string
      */
     public function getError()
@@ -63,6 +71,8 @@ class ContentFieldsResponseObject
     }
 
     /**
+     * Returns the status of the request.
+     *
      * @return string
      */
     public function getStatus()

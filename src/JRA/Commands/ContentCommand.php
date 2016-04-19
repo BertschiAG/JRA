@@ -30,6 +30,8 @@ class ContentCommand extends AbstractCommand
 {
 
     /**
+     * Processes the whole command
+     *
      * @throws CommandException
      */
     public function process()
@@ -43,6 +45,8 @@ class ContentCommand extends AbstractCommand
     }
 
     /**
+     * Defines the current required class and registers them.
+     *
      * @throws CommandException
      */
     private function _defineMethod()
@@ -109,6 +113,9 @@ class ContentCommand extends AbstractCommand
         }
     }
 
+    /**
+     * Set the additional arguments, which are given for the current request.
+     */
     private function _defineAdditionalArguments()
     {
         $this->_getMethod()->setAdditionalArguments($this->getAdditionalArguments());
@@ -116,6 +123,8 @@ class ContentCommand extends AbstractCommand
 
 
     /**
+     * Checks if all required arguments are given.
+     *
      * @return bool
      * @throws CommandException
      */
@@ -129,6 +138,8 @@ class ContentCommand extends AbstractCommand
     }
 
     /**
+     * The methods need to check addition arguments by itself.
+     *
      * @return boolean
      */
     protected function _checkArguments()
@@ -136,6 +147,9 @@ class ContentCommand extends AbstractCommand
         return true;
     }
 
+    /**
+     * If the login should be process automatically, this will execute the necessary functions.
+     */
     private function _processAutoLogin()
     {
         $globalAutoLogin = $this->_config->isAutoLoginOn();
@@ -149,11 +163,17 @@ class ContentCommand extends AbstractCommand
         }
     }
 
+    /**
+     * Executes the process method of the given method.
+     */
     private function _processMethod()
     {
         $this->_getMethod()->process();
     }
 
+    /**
+     * Stored the response of the method.
+     */
     private function _storeResponse()
     {
         $this->setResponse($this->_getMethod()->getResponse());

@@ -13,5 +13,9 @@ namespace JRA\Commands\Routes;
 
 class TokenRoutes
 {
+
+    /**
+     * @link http://learn.getcapi.org/api-methods/joomla-api-routes/token/get-token-token
+     */
     const GET_TOKEN_TOKEN = 'token/:token';
 }

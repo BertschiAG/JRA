@@ -17,16 +17,22 @@ class CategoryFieldsResponseObject
 {
 
     /**
+     * The objects which store the returned values.
+     *
      * @var DatabaseFieldObject[]
      */
     private $_fields;
 
     /**
+     * If an error occurred.
+     *
      * @var string
      */
     private $_error;
 
     /**
+     * Status of the request.
+     *
      * @var string
      */
     private $_status;
@@ -34,7 +40,7 @@ class CategoryFieldsResponseObject
     /**
      * CategoryFieldsResponseObject constructor.
      *
-     * @param string $pResponse
+     * @param string $pResponse The response of the request.
      */
     public function __construct($pResponse)
     {
@@ -47,6 +53,8 @@ class CategoryFieldsResponseObject
     }
 
     /**
+     * Returns all database field objects.
+     *
      * @return DatabaseFieldObject[]
      */
     public function getFields()
@@ -55,6 +63,8 @@ class CategoryFieldsResponseObject
     }
 
     /**
+     * Returns if an error occurred.
+     *
      * @return string
      */
     public function getError()
@@ -63,6 +73,8 @@ class CategoryFieldsResponseObject
     }
 
     /**
+     * Returns the status of the request.
+     *
      * @return string
      */
     public function getStatus()

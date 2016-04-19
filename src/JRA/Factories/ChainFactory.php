@@ -19,6 +19,12 @@ use JRA\Responsibilities\Responsible\Logout\UserCredentialsLogout;
 
 class ChainFactory
 {
+
+    /**
+     * Creates the login chain with all authentication possibilities.
+     *
+     * @return HeaderTokenLogin The first object of the chain.
+     */
     public function getLoginChain()
     {
         $chain = new HeaderTokenLogin();
@@ -27,6 +33,11 @@ class ChainFactory
         return $chain;
     }
 
+    /**
+     * Creates the login chain with all authentication possibilities.
+     *
+     * @return TokenLogout The first object of the logout chain.
+     */
     public function getLogoutChain()
     {
         $chain = new TokenLogout();

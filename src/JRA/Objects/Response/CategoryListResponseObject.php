@@ -17,16 +17,22 @@ class CategoryListResponseObject
 {
 
     /**
+     * The objects which store the returned values.
+     *
      * @var CategoryObject[]
      */
     private $_categories;
 
     /**
+     * If an error occurred.
+     *
      * @var string
      */
     private $_error;
 
     /**
+     * Status of the request.
+     *
      * @var string
      */
     private $_status;
@@ -34,7 +40,7 @@ class CategoryListResponseObject
     /**
      * CategoryListResponseObject constructor.
      *
-     * @param string $pResponse
+     * @param string $pResponse The response of the request.
      */
     public function __construct($pResponse)
     {
@@ -55,6 +61,8 @@ class CategoryListResponseObject
     }
 
     /**
+     * Returns if an error occurred.
+     *
      * @return string
      */
     public function getError()
@@ -63,6 +71,8 @@ class CategoryListResponseObject
     }
 
     /**
+     * Returns the status of the request.
+     *
      * @return string
      */
     public function getStatus()

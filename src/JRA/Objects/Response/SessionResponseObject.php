@@ -21,11 +21,15 @@ class SessionResponseObject
     private $_sessions;
 
     /**
+     * If an error occurred.
+     *
      * @var string
      */
     private $_error;
 
     /**
+     * Status of the request.
+     *
      * @var string
      */
     private $_status;
@@ -33,7 +37,7 @@ class SessionResponseObject
     /**
      * SessionResponseObject constructor.
      *
-     * @param string $pResponse
+     * @param string $pResponse The response of the request.
      */
     public function __construct($pResponse)
     {
@@ -46,6 +50,8 @@ class SessionResponseObject
     }
 
     /**
+     * Returns all session object of the response.
+     *
      * @return SessionObject[]
      */
     public function getSessions()
@@ -54,6 +60,8 @@ class SessionResponseObject
     }
 
     /**
+     * Returns if an error occurred.
+     *
      * @return string
      */
     public function getError()
@@ -62,6 +70,8 @@ class SessionResponseObject
     }
 
     /**
+     * Returns the status of the request.
+     *
      * @return string
      */
     public function getStatus()

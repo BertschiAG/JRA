@@ -20,6 +20,15 @@ use JRA\Facades\ConfigFacade;
 
 class ConfigFactory
 {
+
+    /**
+     * Creates a new config facade.
+     *
+     * @param int $pVersion The version of cAPI which should be used.
+     * @param int $pAuthMethod The authentication method which should be used.
+     * @param int $pAutoLogin Should the JRA automatically perform a login.
+     * @return ConfigFacade The config facade for all configuration access.
+     */
     public function getNewConfigFacade($pVersion = Versions::API_VERSION_LATEST, $pAuthMethod = Authenticate::AUTH_METHOD_HEADER_TOKEN, $pAutoLogin = Authenticate::AUTH_AUTO_LOGIN_ON)
     {
         return

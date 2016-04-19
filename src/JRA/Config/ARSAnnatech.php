@@ -13,8 +13,19 @@ namespace JRA\Config;
 
 class ARSAnnatech
 {
+    
+    /**
+     * The configured dlId.
+     *
+     * @var string
+     */
     private $_dlId;
 
+    /**
+     * Sets the dlId.
+     *
+     * @param string $pDlId The dlId which should be set.
+     */
     public function setDlId($pDlId)
     {
         $this->_dlId = $pDlId;

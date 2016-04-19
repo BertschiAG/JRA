@@ -17,51 +17,72 @@ use JRA\Interfaces\ConfigInterface;
 abstract class AbstractCommand
 {
     /**
+     * True if an auto login should be performed, false otherwise
+     *
      * @var boolean
      */
     private $_autoLogin;
 
     /**
+     * These arguments contains the values for replacing the keys in the route.
+     * It also contains addition arguments, which are over given in the request body.
+     *
      * @var array
      */
     private $_additionalArguments;
 
     /**
+     * The response of the web request (only the html)
+     *
      * @var string
      */
     private $_response;
 
     /**
+     * The words which should be replaced in the url
+     *
      * @var string[]
      */
     protected $_keyWords;
 
     /**
+     * The http method (options, get, head, post, put, delete)
+     *
      * @var string
      */
     private $_httpMethod;
 
     /**
+     * The configuration for the current JRA execution
+     *
      * @var ConfigInterface
      */
     protected $_config;
 
     /**
+     * The factory for internal use
+     *
      * @var InternalFactory
      */
     protected $_factory;
 
     /**
+     * The method which should be executed
+     *
      * @var AbstractMethod
      */
     private $_method;
 
     /**
+     * The route or URL for the current method
+     *
      * @var string
      */
     private $_methodRoute;
 
     /**
+     * The params which will be attached to the url
+     *
      * @var array
      */
     private $_urlParams;
@@ -79,6 +100,8 @@ abstract class AbstractCommand
     }
 
     /**
+     * Returns true if auto login is on, false otherwise.
+     *
      * @return boolean
      */
     public function isAutoLogin()
@@ -87,6 +110,8 @@ abstract class AbstractCommand
     }
 
     /**
+     * Sets the auto login to the specified value.
+     *
      * @param boolean $pValue
      */
     protected function setAutoLogin($pValue)
@@ -95,6 +120,9 @@ abstract class AbstractCommand
     }
 
     /**
+     * Get the additional arguments which are for replacing the keys in the routes.
+     * It also contains additional arguments which will be sent with the request body.
+     *
      * @return array
      */
     public function getAdditionalArguments()
@@ -103,6 +131,9 @@ abstract class AbstractCommand
     }
 
     /**
+     * Set the additional arguments which are for replacing the keys in the routes.
+     * It also contains additional arguments which will be sent with the request body.
+     *
      * @param array $pAdditionalArguments
      */
     public function setAdditionalArguments($pAdditionalArguments)
@@ -111,6 +142,8 @@ abstract class AbstractCommand
     }
 
     /**
+     * Get the response of the web request (only the html)
+     *
      * @return string
      */
     public function getResponse()
@@ -119,6 +152,8 @@ abstract class AbstractCommand
     }
 
     /**
+     * Set the response of the web request (only the html)
+     *
      * @param string $pResponse
      */
     protected function setResponse($pResponse)
@@ -127,7 +162,7 @@ abstract class AbstractCommand
     }
 
     /**
-     *
+     * Processes the method and calls Guzzle for requesting the URL.
      */
     public function process()
     {
@@ -144,7 +179,9 @@ abstract class AbstractCommand
     }
 
     /**
-     * @return boolean
+     * Checks the arguments, so that all necessary arguments are give.
+     *
+     * @return boolean Returns true if correct arguments are specified, false otherwise.
      */
     public function checkArguments()
     {
@@ -166,11 +203,15 @@ abstract class AbstractCommand
     }
 
     /**
+     * The methods need to check addition arguments by itself.
+     *
      * @return boolean
      */
     abstract protected function _checkArguments();
 
     /**
+     * Returns the parsed url (with keywords replaced and url params attached).
+     *
      * @return string
      */
     public function getParsedUrl()
@@ -194,6 +235,8 @@ abstract class AbstractCommand
     }
 
     /**
+     * Returns the http method for the current method.
+     *
      * @return string
      */
     public function getHttpMethod()
@@ -211,6 +254,8 @@ abstract class AbstractCommand
     }
 
     /**
+     * Returns the current specified method.
+     *
      * @return AbstractMethod
      */
     protected function _getMethod()
@@ -219,6 +264,8 @@ abstract class AbstractCommand
     }
 
     /**
+     * Sets the current specified method.
+     *
      * @param AbstractMethod $pMethod
      */
     protected function _setMethod($pMethod)
@@ -227,6 +274,8 @@ abstract class AbstractCommand
     }
 
     /**
+     * Returns the none parsed route.
+     *
      * @return string
      */
     public function getMethodRoute()
@@ -235,6 +284,8 @@ abstract class AbstractCommand
     }
 
     /**
+     * Sets the none parsed route.
+     *
      * @param string $pMethodRoute
      */
     public function setMethodRoute($pMethodRoute)
@@ -243,6 +294,8 @@ abstract class AbstractCommand
     }
 
     /**
+     * Get all url params.
+     *
      * @return array
      */
     public function getUrlParams()
@@ -251,6 +304,8 @@ abstract class AbstractCommand
     }
 
     /**
+     * Set all url params.
+     *
      * @param array $urlParams
      */
     public function setUrlParams($urlParams)

@@ -30,23 +30,23 @@ class UserLoginResponseObject
     private $_session;
 
     /**
+     * If an error occurred.
+     *
      * @var string
      */
     private $_error;
 
     /**
+     * Status of the request.
+     *
      * @var string
      */
     private $_status;
 
     /**
-     * @var string
-     */
-
-    /**
      * UserLoginResponseObject constructor.
      *
-     * @param string $pResponse
+     * @param string $pResponse The response of the request.
      */
     public function __construct($pResponse)
     {
@@ -59,6 +59,8 @@ class UserLoginResponseObject
     }
 
     /**
+     * Returns the message of the response.
+     *
      * @return string
      */
     public function getMsg()
@@ -67,6 +69,8 @@ class UserLoginResponseObject
     }
 
     /**
+     * Returns the Joomla Response of the response.
+     *
      * @return string
      */
     public function getJResponse()
@@ -75,6 +79,8 @@ class UserLoginResponseObject
     }
 
     /**
+     * Returns the session of the response.
+     *
      * @return string
      */
     public function getSession()
@@ -83,6 +89,8 @@ class UserLoginResponseObject
     }
 
     /**
+     * Returns if an error occurred.
+     *
      * @return string
      */
     public function getError()
@@ -91,6 +99,8 @@ class UserLoginResponseObject
     }
 
     /**
+     * Returns the status of the request.
+     *
      * @return string
      */
     public function getStatus()

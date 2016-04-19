@@ -20,6 +20,8 @@ use JRA\Interfaces\ConfigInterface;
 class CommandFactory
 {
     /**
+     * The factory which is used to create the internal objects.
+     *
      * @var InternalFactory
      */
     private $_internalFactory;
@@ -27,7 +29,7 @@ class CommandFactory
     /**
      * CommandFactory constructor.
      *
-     * @param InternalFactory $pInternalFactory
+     * @param InternalFactory $pInternalFactory The factory which is used to create the internal objects.
      */
     public function __construct($pInternalFactory)
     {
@@ -35,10 +37,12 @@ class CommandFactory
     }
 
     /**
-     * @param ConfigInterface $pConfig
-     * @param $pMethodRoute
-     * @param array $pAdditionalArguments
-     * @return CommandInvoker
+     * Returns a new command invoker with a content command configured.
+     *
+     * @param ConfigInterface $pConfig The configuration for the creation of the command invoker.
+     * @param string $pMethodRoute The requested method route.
+     * @param array $pAdditionalArguments Additional arguments which the command needs.
+     * @return CommandInvoker Returns the created and configured command invoker.
      */
     public function getContentCommand($pConfig, $pMethodRoute, $pAdditionalArguments = [])
     {
@@ -52,10 +56,12 @@ class CommandFactory
     }
 
     /**
-     * @param ConfigInterface $pConfig
-     * @param $pMethodRoute
-     * @param array $pAdditionalArguments
-     * @return CommandInvoker
+     * Returns a new command invoker with a token command configured.
+     *
+     * @param ConfigInterface $pConfig The configuration for the creation of the command invoker.
+     * @param string $pMethodRoute The requested method route.
+     * @param array $pAdditionalArguments Additional arguments which the command needs.
+     * @return CommandInvoker Returns the created and configured command invoker.
      */
     public function getTokenCommand($pConfig, $pMethodRoute, $pAdditionalArguments = [])
     {
@@ -69,10 +75,12 @@ class CommandFactory
     }
 
     /**
-     * @param ConfigInterface $pConfig
-     * @param string $pMethodRoute
-     * @param array $pAdditionalArguments
-     * @return CommandInvoker
+     * Returns a new command invoker with an user command configured.
+     *
+     * @param ConfigInterface $pConfig The configuration for the creation of the command invoker.
+     * @param string $pMethodRoute The requested method route.
+     * @param array $pAdditionalArguments Additional arguments which the command needs.
+     * @return CommandInvoker Returns the created and configured command invoker.
      */
     public function getUserCommand($pConfig, $pMethodRoute, $pAdditionalArguments = [])
     {

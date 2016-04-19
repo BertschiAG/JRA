@@ -17,16 +17,22 @@ class InternalFactory
 {
 
     /**
+     * The chain factory for login and logout.
+     *
      * @var ChainFactory
      */
     private $_chainFactory;
 
     /**
+     * The factory which is considered to guzzle object creation.
+     *
      * @var GuzzleFactory
      */
     private $_guzzleFactory;
 
     /**
+     * The command factory which creates the requested method.
+     *
      * @var CommandFactory
      */
     private $_commandFactory;
@@ -34,7 +40,7 @@ class InternalFactory
     /**
      * InternalFactory constructor.
      *
-     * @param ConfigInterface $pConfig
+     * @param ConfigInterface $pConfig The configuration of the Request.
      */
     public function __construct(ConfigInterface $pConfig)
     {
@@ -44,6 +50,8 @@ class InternalFactory
     }
 
     /**
+     * Returns the chain factory.
+     *
      * @return ChainFactory
      */
     public function getChainFactory()
@@ -52,6 +60,8 @@ class InternalFactory
     }
 
     /**
+     * Returns the guzzle factory.
+     *
      * @return GuzzleFactory
      */
     public function getGuzzleFactory()
@@ -60,6 +70,8 @@ class InternalFactory
     }
 
     /**
+     * Returns the command factory.
+     *
      * @return CommandFactory
      */
     public function getCommandFactory()

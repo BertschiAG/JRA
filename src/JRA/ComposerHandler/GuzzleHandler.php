@@ -20,16 +20,22 @@ use JRA\Interfaces\ConfigInterface;
 class GuzzleHandler
 {
     /**
+     * The given configuration.
+     *
      * @var ConfigFacade
      */
     private $_config;
 
     /**
+     * The internal used factory.
+     *
      * @var InternalFactory
      */
     private $_factory;
 
     /**
+     * The guzzle client object.
+     *
      * @var Client
      */
     private $_client;
@@ -49,6 +55,8 @@ class GuzzleHandler
     }
 
     /**
+     * Make a get request to the given path.
+     *
      * @param string $pPath
      * @return \Guzzle\Http\Message\Response
      */
@@ -60,6 +68,8 @@ class GuzzleHandler
     }
 
     /**
+     * Make a put request to the given path.
+     *
      * @param string $pPath
      * @return \Guzzle\Http\Message\Response
      */
@@ -71,6 +81,8 @@ class GuzzleHandler
     }
 
     /**
+     * Make a delete request to the given path.
+     *
      * @param string $pPath
      * @return \Guzzle\Http\Message\Response
      */
@@ -82,6 +94,8 @@ class GuzzleHandler
     }
 
     /**
+     * Make a post request to the given path.
+     *
      * @param string $pPath
      * @param array $pData
      * @return \Guzzle\Http\Message\Response
@@ -93,6 +107,11 @@ class GuzzleHandler
         return $response;
     }
 
+    /**
+     * If the authentication is set on header authentication. An header with the required arguments will be created.
+     *
+     * @return array
+     */
     private function _configurationOptions()
     {
         $response = array();

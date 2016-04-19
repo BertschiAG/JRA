@@ -25,11 +25,15 @@ class UserLogoutResponseObject
     private $_jResponse;
 
     /**
+     * If an error occurred.
+     *
      * @var string
      */
     private $_error;
 
     /**
+     * Status of the request.
+     *
      * @var string
      */
     private $_status;
@@ -37,7 +41,7 @@ class UserLogoutResponseObject
     /**
      * UserLogoutResponseObject constructor.
      *
-     * @param string $pResponse
+     * @param string $pResponse The response of the request.
      */
     public function __construct($pResponse)
     {
@@ -49,6 +53,8 @@ class UserLogoutResponseObject
     }
 
     /**
+     * Returns the message of the response.
+     *
      * @return string
      */
     public function getMsg()
@@ -57,6 +63,8 @@ class UserLogoutResponseObject
     }
 
     /**
+     * Return the Joomla Response of the response.
+     *
      * @return string
      */
     public function getJResponse()
@@ -65,6 +73,8 @@ class UserLogoutResponseObject
     }
 
     /**
+     * Returns if an error occurred.
+     *
      * @return string
      */
     public function getError()
@@ -73,6 +83,8 @@ class UserLogoutResponseObject
     }
 
     /**
+     * Returns the status of the request.
+     *
      * @return string
      */
     public function getStatus()

@@ -16,7 +16,6 @@ use JRA\Commands\Routes\TokenRoutes;
 use JRA\Commands\Routes\UserRoutes;
 use JRA\Exceptions\UserAPIException;
 use JRA\Factories\InternalFactory;
-use JRA\FrontFactory;
 use JRA\Interfaces\ConfigInterface;
 use JRA\Objects\CreateContentObject;
 use JRA\Objects\Response\CategoryFieldsResponseObject;
@@ -36,27 +35,37 @@ use stdClass;
 
 class APIFacade
 {
+
+    /**
+     * The configuration for the requests.
+     *
+     * @var ConfigInterface
+     */
     private $_config;
-    private $_frontFactory;
+
+    /**
+     * The internal factory for all internal object creations.
+     *
+     * @var InternalFactory
+     */
     private $_internalFactory;
 
     /**
      * APIFacade constructor.
-     * @param ConfigInterface $pConfig
-     * @param FrontFactory $pFrontFactory
-     * @param InternalFactory $pInternalFactory
+     *
+     * @param ConfigInterface $pConfig The configuration of the request.
+     * @param InternalFactory $pInternalFactory The factory which is used internal for creating objects.
      */
-    public function __construct(ConfigInterface $pConfig, FrontFactory $pFrontFactory, InternalFactory $pInternalFactory)
+    public function __construct(ConfigInterface $pConfig, InternalFactory $pInternalFactory)
     {
         $this->_config = $pConfig;
-        $this->_frontFactory = $pFrontFactory;
         $this->_internalFactory = $pInternalFactory;
     }
 
     /**
-     * Login on the website, without depending on an authentication method
+     * Login on the website, without depending on an authentication method.
      *
-     * @return bool|stdClass false on failure or json decoded response object as stdClass
+     * @return bool|stdClass Returns false on failure or json decoded response object as stdClass.
      */
     public function login()
     {
@@ -67,9 +76,9 @@ class APIFacade
     }
 
     /**
-     * Logout on the website, without depending on an authentication method
+     * Logout on the website, without depending on an authentication method.
      *
-     * @return bool|stdClass
+     * @return bool|stdClass Returns false on failure or json decoded response object as stdClass.
      */
     public function logout()
     {
@@ -80,9 +89,9 @@ class APIFacade
     }
 
     /**
-     * Get all active sessions
+     * Get all active sessions.
      *
-     * @return SessionResponseObject
+     * @return SessionResponseObject Returns the response in an functionality providing object.
      */
     public function getSessions()
     {
@@ -94,9 +103,9 @@ class APIFacade
     }
 
     /**
-     * Update the own user profile
+     * Update the own user profile.
      *
-     * @throws UserAPIException
+     * @throws UserAPIException This functionality is not supported yet.
      */
     public function updateProfile()
     {
@@ -104,9 +113,9 @@ class APIFacade
     }
 
     /**
-     * Update user profile of other users by id
+     * Update user profile of other users by id.
      *
-     * @throws UserAPIException
+     * @throws UserAPIException This functionality is not supported yet.
      */
     public function updateProfileById()
     {
@@ -114,9 +123,9 @@ class APIFacade
     }
 
     /**
-     * Get all categories from joomla
+     * Get all categories from joomla.
      *
-     * @return CategoryListResponseObject
+     * @return CategoryListResponseObject Returns the response in an functionality providing object.
      */
     public function getAllCategories()
     {
@@ -128,10 +137,10 @@ class APIFacade
     }
 
     /**
-     * Get all categories which are a subcategory an parent category, which is selected by id
+     * Get all categories which are a subcategory an parent category, which is selected by id.
      *
-     * @param int $pId
-     * @return CategoryListResponseObject
+     * @param int $pId The parent id if for selecting all child categories.
+     * @return CategoryListResponseObject Returns the response in an functionality providing object.
      */
     public function getAllSubCategoriesByParentId($pId)
     {
@@ -143,9 +152,9 @@ class APIFacade
     }
 
     /**
-     * Get all content from joomla
+     * Get all content from joomla.
      *
-     * @return ContentListResponseObject
+     * @return ContentListResponseObject Returns the response in an functionality providing object.
      */
     public function getAllContents()
     {
@@ -157,9 +166,9 @@ class APIFacade
     }
 
     /**
-     * Get all database fields with the field configuration from an category
+     * Get all database fields with the field configuration from an category.
      *
-     * @return CategoryFieldsResponseObject
+     * @return CategoryFieldsResponseObject Returns the response in an functionality providing object.
      */
     public function getAllCategoryFields()
     {
@@ -171,10 +180,10 @@ class APIFacade
     }
 
     /**
-     * Get all content which is under one category by id
+     * Get all content which is under one category by id.
      *
-     * @param int $pId
-     * @return ContentListResponseObject
+     * @param int $pId The category id for selecting all contents under this category.
+     * @return ContentListResponseObject Returns the response in an functionality providing object.
      */
     public function getAllContentsByCategoryId($pId)
     {
@@ -186,10 +195,10 @@ class APIFacade
     }
 
     /**
-     * Get an single category by id
+     * Get an single category by id.
      *
-     * @param int $pId
-     * @return CategoryListResponseObject
+     * @param int $pId The category id to select this record.
+     * @return CategoryListResponseObject Returns the response in an functionality providing object.
      */
     public function getCategoryById($pId)
     {
@@ -201,9 +210,9 @@ class APIFacade
     }
 
     /**
-     * Get all database fields with the field configuration from an content
+     * Get all database fields with the field configuration from an content.
      *
-     * @return ContentFieldsResponseObject
+     * @return ContentFieldsResponseObject Returns the response in an functionality providing object.
      */
     public function getAllContentFields()
     {
@@ -215,10 +224,10 @@ class APIFacade
     }
 
     /**
-     * Delete an content by id
+     * Delete an content by id.
      *
-     * @param int $pId
-     * @return ContentResponseObject
+     * @param int $pId The content id to delete this record.
+     * @return ContentResponseObject Returns the response in an functionality providing object.
      */
     public function deleteContentById($pId)
     {
@@ -230,10 +239,10 @@ class APIFacade
     }
 
     /**
-     * Get an single content by id
+     * Get an single content by id.
      *
-     * @param int $pId
-     * @return ContentResponseObject
+     * @param int $pId The content id to select this record.
+     * @return ContentResponseObject Returns the response in an functionality providing object.
      */
     public function getContentById($pId)
     {
@@ -245,10 +254,10 @@ class APIFacade
     }
 
     /**
-     * Create an content from an create content object
+     * Create an content from an create content object.
      *
-     * @param CreateContentObject $pContent
-     * @return MsgResponseObject
+     * @param CreateContentObject $pContent The object with all information in it to create a content.
+     * @return MsgResponseObject Returns the response in an functionality providing object.
      */
     public function createContent(CreateContentObject $pContent)
     {
@@ -262,12 +271,12 @@ class APIFacade
     }
 
     /**
-     * Update an content by an update content object
-     * The id for updating the right content is inside the update content object
+     * Update an content by an update content object.
+     * The id for updating the right content is inside the update content object.
      *
-     * @param UpdateContentObject $pContent
-     * @param int $pId
-     * @return MsgResponseObject
+     * @param UpdateContentObject $pContent The object with all information in it to update a content.
+     * @param int $pId The content id of the content which should be updated.
+     * @return MsgResponseObject Returns the response in an functionality providing object.
      */
     public function updateContentById(UpdateContentObject $pContent, $pId)
     {
@@ -282,10 +291,10 @@ class APIFacade
     }
 
     /**
-     * Make an login request with an token
+     * Make an login request with an token.
      *
-     * @param $pToken
-     * @return JResponseObject
+     * @param string $pToken The token for login at the cAPI.
+     * @return JResponseObject Returns the response in an functionality providing object.
      */
     public function loginToken($pToken)
     {
@@ -297,11 +306,11 @@ class APIFacade
     }
 
     /**
-     * Login with the user credentials
+     * Login with the user credentials.
      *
-     * @param $pUsername
-     * @param $pPassword
-     * @return UserLoginResponseObject
+     * @param string $pUsername The username which is used to login at the cAPI.
+     * @param string $pPassword The password which is used to login at the cAPI.
+     * @return UserLoginResponseObject Returns the response in an functionality providing object.
      */
     public function loginUserCredentials($pUsername, $pPassword)
     {
@@ -318,11 +327,11 @@ class APIFacade
     }
 
     /**
-     * Logout an specified user session
+     * Logout an specified user session.
      *
-     * @param $pUsername
-     * @param $pSession
-     * @return UserLogoutResponseObject
+     * @param string $pUsername The username which is used to get the correct session.
+     * @param string $pSession The password which is used to get the correct session.
+     * @return UserLogoutResponseObject Returns the response in an functionality providing object.
      */
     public function logoutUserSession($pUsername, $pSession)
     {
@@ -339,9 +348,9 @@ class APIFacade
     }
 
     /**
-     * Get the current logged in user
+     * Get the current logged in user.
      *
-     * @return UserLogoutResponseObject
+     * @return UserLogoutResponseObject Returns the response in an functionality providing object.
      */
     public function getCurrentUser()
     {

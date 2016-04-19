@@ -25,11 +25,15 @@ class JResponseObject
     private $_jResponse;
 
     /**
+     * If an error occurred.
+     *
      * @var string
      */
     private $_error;
 
     /**
+     * Status of the request.
+     *
      * @var string
      */
     private $_status;
@@ -37,7 +41,7 @@ class JResponseObject
     /**
      * JResponseObject constructor.
      *
-     * @param string $pResponse
+     * @param string $pResponse The response of the request.
      */
     public function __construct($pResponse)
     {
@@ -49,6 +53,8 @@ class JResponseObject
     }
 
     /**
+     * Returns the message of the response.
+     *
      * @return string
      */
     public function getMsg()
@@ -57,6 +63,8 @@ class JResponseObject
     }
 
     /**
+     * Returns the Joomla Response of the response.
+     *
      * @return string
      */
     public function getJResponse()
@@ -65,6 +73,8 @@ class JResponseObject
     }
 
     /**
+     * Returns if an error occurred.
+     *
      * @return string
      */
     public function getError()
@@ -73,6 +83,8 @@ class JResponseObject
     }
 
     /**
+     * Returns the status of the request.
+     *
      * @return string
      */
     public function getStatus()

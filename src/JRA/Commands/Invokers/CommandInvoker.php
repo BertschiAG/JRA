@@ -16,11 +16,15 @@ use JRA\Abstracts\AbstractCommand;
 class CommandInvoker
 {
     /**
+     * The command which should be executed.
+     *
      * @var AbstractCommand
      */
     protected $_command;
 
     /**
+     * The response of the command.
+     *
      * @var string
      */
     protected $_contents;
@@ -45,6 +49,8 @@ class CommandInvoker
     }
 
     /**
+     * Returns the response of the command.
+     *
      * @return string
      */
     public function getContents()

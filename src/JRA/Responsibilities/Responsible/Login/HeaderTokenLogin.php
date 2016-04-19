@@ -21,8 +21,11 @@ class HeaderTokenLogin extends AbstractLoginHandler
 {
 
     /**
-     * @param ConfigInterface $pConfig
-     * @param InternalFactory $pInternalFactory
+     * Each chain needs to fill this function with it's own actions.
+     * This function contains the functionality of each chain.
+     *
+     * @param ConfigInterface $pConfig The configuration which is used to make the request.
+     * @param InternalFactory $pInternalFactory The factory which is responsible for the internal object creation.
      * @return bool|stdClass true if the request has been processed, false otherwise
      */
     protected function process(ConfigInterface $pConfig, InternalFactory $pInternalFactory)

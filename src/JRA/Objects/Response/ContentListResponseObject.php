@@ -22,11 +22,15 @@ class ContentListResponseObject
     private $_contents;
 
     /**
+     * If an error occurred.
+     *
      * @var string
      */
     private $_error;
 
     /**
+     * Status of the request.
+     *
      * @var string
      */
     private $_status;
@@ -34,7 +38,7 @@ class ContentListResponseObject
     /**
      * ContentListResponseObject constructor.
      *
-     * @param string $pResponse
+     * @param string $pResponse The response of the request.
      */
     public function __construct($pResponse)
     {
@@ -49,6 +53,8 @@ class ContentListResponseObject
     }
 
     /**
+     * Returns all content objects of the response.
+     *
      * @return ContentObject[]
      */
     public function getContents()
@@ -57,6 +63,8 @@ class ContentListResponseObject
     }
 
     /**
+     * Returns if an error occurred.
+     *
      * @return string
      */
     public function getError()
@@ -65,6 +73,8 @@ class ContentListResponseObject
     }
 
     /**
+     * Returns the status of the request.
+     *
      * @return string
      */
     public function getStatus()

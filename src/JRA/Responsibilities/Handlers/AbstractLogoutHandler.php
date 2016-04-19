@@ -19,11 +19,15 @@ abstract class AbstractLogoutHandler
 {
 
     /**
+     * The successor of the current object.
+     *
      * @var AbstractLogoutHandler
      */
     private $_successor = null;
 
     /**
+     * Appends an new successor, which will be added to the end ob the chain.
+     *
      * @param AbstractLogoutHandler $pHandler
      */
     final public function append(AbstractLogoutHandler $pHandler)
@@ -36,9 +40,11 @@ abstract class AbstractLogoutHandler
     }
 
     /**
-     * @param ConfigInterface $pConfig
-     * @param InternalFactory $pInternalFactory
-     * @return bool|stdClass
+     * Starts processing the current object and start handling the next if the current one failed.
+     *
+     * @param ConfigInterface $pConfig The configuration which is used to make the requests.
+     * @param InternalFactory $pInternalFactory The factory which is responsible for the internal object creation.
+     * @return bool|stdClass Return false on failure, otherwise it will return a stdClass object which contains the response of the request.
      */
     final public function handle(ConfigInterface $pConfig, InternalFactory $pInternalFactory)
     {
@@ -52,8 +58,11 @@ abstract class AbstractLogoutHandler
     }
 
     /**
-     * @param ConfigInterface $pConfig
-     * @param InternalFactory $pInternalFactory
+     * Each chain needs to fill this function with it's own actions.
+     * This function contains the functionality of each chain.
+     *
+     * @param ConfigInterface $pConfig The configuration which is used to make the request.
+     * @param InternalFactory $pInternalFactory The factory which is responsible for the internal object creation.
      * @return bool|stdClass true if the request has been processed, false otherwise
      */
     abstract protected function process(ConfigInterface $pConfig, InternalFactory $pInternalFactory);

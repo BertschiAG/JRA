@@ -20,11 +20,15 @@ class MsgResponseObject
     private $_msg;
 
     /**
+     * If an error occurred.
+     *
      * @var string
      */
     private $_error;
 
     /**
+     * Status of the request.
+     *
      * @var string
      */
     private $_status;
@@ -32,7 +36,7 @@ class MsgResponseObject
     /**
      * MsgResponseObject constructor.
      *
-     * @param string $pResponse
+     * @param string $pResponse The response of the request.
      */
     public function __construct($pResponse)
     {
@@ -43,6 +47,8 @@ class MsgResponseObject
     }
 
     /**
+     * Returns the message of the response.
+     *
      * @return string
      */
     public function getMsg()
@@ -51,6 +57,8 @@ class MsgResponseObject
     }
 
     /**
+     * Returns if an error occurred.
+     *
      * @return string
      */
     public function getError()
@@ -59,6 +67,8 @@ class MsgResponseObject
     }
 
     /**
+     * Returns the status of the request.
+     *
      * @return string
      */
     public function getStatus()

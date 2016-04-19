@@ -11,12 +11,8 @@ A list of all available exceptions.
 | 57400       | AuthenticationConfigException  | JRAException                  |                         |
 | 57500       | VersionException               | JRAException                  |                         |
 | 57600       | APIException                   | JRAException                  |                         |
-| 57700       | ARSAPIException                | APIException                  |                         |
-| 57800       | ContentAPIException            | APIException                  |                         |
-| 57900       | TokenAPIException              | APIException                  |                         |
 | 58000       | UserAPIException               | APIException                  |                         |
 | 58100       | CommandException               | JRAException                  |                         |
-| 58200       | ResponseException              | JRAException                  |                         |
 | 58300       |                                |                               |                         |
 | 58400       |                                |                               |                         |
 
@@ -34,12 +30,6 @@ A list of all available exceptions.
 ## VersionException
 
 ## APIException
-
-## ARSAPIException
-
-## ContentAPIException
-
-## TokenAPIException
 
 ## UserAPIException
 

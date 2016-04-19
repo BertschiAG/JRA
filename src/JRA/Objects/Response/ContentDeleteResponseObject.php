@@ -20,11 +20,15 @@ class ContentDeleteResponseObject
     private $_content;
 
     /**
+     * If an error occurred.
+     *
      * @var string
      */
     private $_error;
 
     /**
+     * Status of the request.
+     *
      * @var string
      */
     private $_status;
@@ -32,7 +36,7 @@ class ContentDeleteResponseObject
     /**
      * CAPIResponseObject constructor.
      *
-     * @param string $pResponse
+     * @param string $pResponse The response of the request.
      */
     public function __construct($pResponse)
     {
@@ -43,6 +47,8 @@ class ContentDeleteResponseObject
     }
 
     /**
+     * Returns the content of the response.
+     *
      * @return string
      */
     public function getContent()
@@ -51,6 +57,8 @@ class ContentDeleteResponseObject
     }
 
     /**
+     * Returns if an error occurred.
+     *
      * @return string
      */
     public function getError()
@@ -59,6 +67,8 @@ class ContentDeleteResponseObject
     }
 
     /**
+     * Returns the status of the request.
+     *
      * @return string
      */
     public function getStatus()

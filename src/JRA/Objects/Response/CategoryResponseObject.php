@@ -22,11 +22,15 @@ class CategoryResponseObject
     private $_category;
 
     /**
+     * If an error occurred.
+     *
      * @var string
      */
     private $_error;
 
     /**
+     * Status of the request.
+     *
      * @var string
      */
     private $_status;
@@ -34,7 +38,7 @@ class CategoryResponseObject
     /**
      * CategoryResponseObject constructor.
      *
-     * @param string $pResponse
+     * @param string $pResponse The response of the request.
      */
     public function __construct($pResponse)
     {
@@ -45,6 +49,8 @@ class CategoryResponseObject
     }
 
     /**
+     * Returns the content of the response.
+     *
      * @return CategoryObject
      */
     public function getContent()
@@ -53,6 +59,8 @@ class CategoryResponseObject
     }
 
     /**
+     * Returns if an error occurred.
+     *
      * @return string
      */
     public function getError()
@@ -61,6 +69,8 @@ class CategoryResponseObject
     }
 
     /**
+     * Returns the status of the request.
+     *
      * @return string
      */
     public function getStatus()
