@@ -1,7 +1,7 @@
 {
   "name": "bertschi/jra",
   "homepage": "http://www.bertschi.com/",
-  "description": "A library to connect to the Joomla Rest API (cAPI) from https://www.annatech.com/.",
+  "description": "A library for interfacing the cAPI of https://www.annatech.com/.",
   "type": "library",
   "license": "LGPL-3.0",
   "authors": [
