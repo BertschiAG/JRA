@@ -3,7 +3,7 @@
   "homepage": "http://www.bertschi.com/",
   "description": "A library for interfacing the cAPI of https://www.annatech.com/.",
   "type": "library",
-  "license": "LGPL-3.0",
+  "license": "GPL-3.0",
   "authors": [
     {
       "name": "Janik Baumann",
