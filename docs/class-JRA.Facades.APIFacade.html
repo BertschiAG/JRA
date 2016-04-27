@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class JRA\Facades\APIFacade | JRA, PHP cAPI interface</title>
+
+	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
+	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
+
+</head>
+
+<body>
+	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a href="index.html" class="navbar-brand">JRA, PHP cAPI interface</a>
+			</div>
+			<div class="collapse navbar-collapse">
+
+                <form id="search" class="navbar-form navbar-left" role="search">
+                    <input type="hidden" name="cx" value="">
+                    <input type="hidden" name="ie" value="UTF-8">
+                    <div class="form-group">
+                        <input type="text" name="q" class="search-query form-control" placeholder="Search">
+					</div>
+				</form>
+
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="namespace-JRA.Facades.html" title="Summary of JRA\Facades"><span>Namespace</span></a>
+					</li>
+					<li class="active">
+<span>Class</span>					</li>
+
+					<li class="divider-vertical"></li>
+
+					<li>
+						<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+					</li>
+
+
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+					<li class="active">
+						<a href="namespace-JRA.html">
+							JRA<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-JRA.Abstracts.html">
+							Abstracts						</a>
+							</li>
+					<li>
+						<a href="namespace-JRA.Commands.html">
+							Commands<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-JRA.Commands.Invokers.html">
+							Invokers						</a>
+							</li>
+					<li>
+						<a href="namespace-JRA.Commands.Methods.html">
+							Methods<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-JRA.Commands.Methods.Content.html">
+							Content						</a>
+							</li>
+					<li>
+						<a href="namespace-JRA.Commands.Methods.Token.html">
+							Token						</a>
+							</li>
+					<li>
+						<a href="namespace-JRA.Commands.Methods.User.html">
+							User						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-JRA.Commands.Routes.html">
+							Routes						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-JRA.ComposerHandler.html">
+							ComposerHandler						</a>
+							</li>
+					<li>
+						<a href="namespace-JRA.Config.html">
+							Config<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-JRA.Config.Helper.html">
+							Helper						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-JRA.Exceptions.html">
+							Exceptions						</a>
+							</li>
+					<li class="active">
+						<a href="namespace-JRA.Facades.html">
+							Facades						</a>
+							</li>
+					<li>
+						<a href="namespace-JRA.Factories.html">
+							Factories						</a>
+							</li>
+					<li>
+						<a href="namespace-JRA.Interfaces.html">
+							Interfaces						</a>
+							</li>
+					<li>
+						<a href="namespace-JRA.Objects.html">
+							Objects<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-JRA.Objects.Response.html">
+							Response<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-JRA.Objects.Response.Data.html">
+							Data						</a>
+							</li>
+								</ul></li></ul></li>
+					<li>
+						<a href="namespace-JRA.Responsibilities.html">
+							Responsibilities<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-JRA.Responsibilities.Handlers.html">
+							Handlers						</a>
+							</li>
+					<li>
+						<a href="namespace-JRA.Responsibilities.Responsible.html">
+							Responsible<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-JRA.Responsibilities.Responsible.Login.html">
+							Login						</a>
+							</li>
+					<li>
+						<a href="namespace-JRA.Responsibilities.Responsible.Logout.html">
+							Logout						</a>
+							</li>
+								</ul></li></ul></li></ul></li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-JRA.Facades.APIFacade.html">APIFacade</a></li>
+				<li><a href="class-JRA.Facades.ConfigFacade.html">ConfigFacade</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class APIFacade</h1>
+
+
+
+
+
+
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-JRA.html">JRA</a>\<a href="namespace-JRA.Facades.html">Facades</a><br>
+		
+
+			<b>Located at</b> <a href="source-class-JRA.Facades.APIFacade.html#36-363" title="Go to source code">Facades/APIFacade.php</a>
+		<br>
+	</div>
+
+
+
+		<div class="panel panel-default">
+			<div class="panel-heading"><h2>Methods summary</h2></div>
+			<table class="summary table table-bordered table-striped methods" id="methods">
+		<tr data-order="__construct" id="___construct">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___construct">#</a>
+			<code><a href="source-class-JRA.Facades.APIFacade.html#53-63" title="Go to source code">__construct</a>( <span><code><a href="class-JRA.Interfaces.ConfigInterface.html">JRA\Interfaces\ConfigInterface</a></code> <var>$pConfig</var></span>, <span><code><a href="class-JRA.Factories.InternalFactory.html">JRA\Factories\InternalFactory</a></code> <var>$pInternalFactory</var></span> )</code>
+
+			<div class="description short">
+				<p>APIFacade constructor.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>APIFacade constructor.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$pConfig</var></dt>
+						<dd>The configuration of the request.</dd>
+						<dt><var>$pInternalFactory</var></dt>
+						<dd>The factory which is used internal for creating objects.</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="login" id="_login">
+
+			<td class="attributes"><code>
+				 public 
+				boolean|stdClass
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_login">#</a>
+			<code><a href="source-class-JRA.Facades.APIFacade.html#65-76" title="Go to source code">login</a>( )</code>
+
+			<div class="description short">
+				<p>Login on the website, without depending on an authentication method.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Login on the website, without depending on an authentication method.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean|stdClass<br>Returns false on failure or json decoded response object as stdClass.
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="logout" id="_logout">
+
+			<td class="attributes"><code>
+				 public 
+				boolean|stdClass
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_logout">#</a>
+			<code><a href="source-class-JRA.Facades.APIFacade.html#78-89" title="Go to source code">logout</a>( )</code>
+
+			<div class="description short">
+				<p>Logout on the website, without depending on an authentication method.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Logout on the website, without depending on an authentication method.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean|stdClass<br>Returns false on failure or json decoded response object as stdClass.
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getSessions" id="_getSessions">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-JRA.Objects.Response.SessionResponseObject.html">JRA\Objects\Response\SessionResponseObject</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getSessions">#</a>
+			<code><a href="source-class-JRA.Facades.APIFacade.html#91-103" title="Go to source code">getSessions</a>( )</code>
+
+			<div class="description short">
+				<p>Get all active sessions.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Get all active sessions.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-JRA.Objects.Response.SessionResponseObject.html">JRA\Objects\Response\SessionResponseObject</a></code><br>Returns the response in an functionality providing object.
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="updateProfile" id="_updateProfile">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_updateProfile">#</a>
+			<code><a href="source-class-JRA.Facades.APIFacade.html#105-113" title="Go to source code">updateProfile</a>( )</code>
+
+			<div class="description short">
+				<p>Update the own user profile.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Update the own user profile.</p>
+
+
+
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-JRA.Exceptions.UserAPIException.html">JRA\Exceptions\UserAPIException</a></code><br>This functionality is not supported yet.
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="updateProfileById" id="_updateProfileById">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_updateProfileById">#</a>
+			<code><a href="source-class-JRA.Facades.APIFacade.html#115-123" title="Go to source code">updateProfileById</a>( )</code>
+
+			<div class="description short">
+				<p>Update user profile of other users by id.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Update user profile of other users by id.</p>
+
+
+
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-JRA.Exceptions.UserAPIException.html">JRA\Exceptions\UserAPIException</a></code><br>This functionality is not supported yet.
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getAllCategories" id="_getAllCategories">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-JRA.Objects.Response.CategoryListResponseObject.html">JRA\Objects\Response\CategoryListResponseObject</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getAllCategories">#</a>
+			<code><a href="source-class-JRA.Facades.APIFacade.html#125-137" title="Go to source code">getAllCategories</a>( )</code>
+
+			<div class="description short">
+				<p>Get all categories from joomla.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Get all categories from joomla.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-JRA.Objects.Response.CategoryListResponseObject.html">JRA\Objects\Response\CategoryListResponseObject</a></code><br>Returns the response in an functionality providing object.
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getAllSubCategoriesByParentId" id="_getAllSubCategoriesByParentId">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-JRA.Objects.Response.CategoryListResponseObject.html">JRA\Objects\Response\CategoryListResponseObject</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getAllSubCategoriesByParentId">#</a>
+			<code><a href="source-class-JRA.Facades.APIFacade.html#139-152" title="Go to source code">getAllSubCategoriesByParentId</a>( <span>integer <var>$pId</var></span> )</code>
+
+			<div class="description short">
+				<p>Get all categories which are a subcategory an parent category, which is selected by id.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Get all categories which are a subcategory an parent category, which is selected by id.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$pId</var></dt>
+						<dd>The parent id if for selecting all child categories.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-JRA.Objects.Response.CategoryListResponseObject.html">JRA\Objects\Response\CategoryListResponseObject</a></code><br>Returns the response in an functionality providing object.
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getAllContents" id="_getAllContents">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-JRA.Objects.Response.ContentListResponseObject.html">JRA\Objects\Response\ContentListResponseObject</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getAllContents">#</a>
+			<code><a href="source-class-JRA.Facades.APIFacade.html#154-166" title="Go to source code">getAllContents</a>( )</code>
+
+			<div class="description short">
+				<p>Get all content from joomla.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Get all content from joomla.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-JRA.Objects.Response.ContentListResponseObject.html">JRA\Objects\Response\ContentListResponseObject</a></code><br>Returns the response in an functionality providing object.
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getAllCategoryFields" id="_getAllCategoryFields">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-JRA.Objects.Response.CategoryFieldsResponseObject.html">JRA\Objects\Response\CategoryFieldsResponseObject</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getAllCategoryFields">#</a>
+			<code><a href="source-class-JRA.Facades.APIFacade.html#168-180" title="Go to source code">getAllCategoryFields</a>( )</code>
+
+			<div class="description short">
+				<p>Get all database fields with the field configuration from an category.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Get all database fields with the field configuration from an category.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-JRA.Objects.Response.CategoryFieldsResponseObject.html">JRA\Objects\Response\CategoryFieldsResponseObject</a></code><br>Returns the response in an functionality providing object.
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getAllContentsByCategoryId" id="_getAllContentsByCategoryId">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-JRA.Objects.Response.ContentListResponseObject.html">JRA\Objects\Response\ContentListResponseObject</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getAllContentsByCategoryId">#</a>
+			<code><a href="source-class-JRA.Facades.APIFacade.html#182-195" title="Go to source code">getAllContentsByCategoryId</a>( <span>integer <var>$pId</var></span> )</code>
+
+			<div class="description short">
+				<p>Get all content which is under one category by id.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Get all content which is under one category by id.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$pId</var></dt>
+						<dd>The category id for selecting all contents under this category.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-JRA.Objects.Response.ContentListResponseObject.html">JRA\Objects\Response\ContentListResponseObject</a></code><br>Returns the response in an functionality providing object.
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getCategoryById" id="_getCategoryById">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-JRA.Objects.Response.CategoryListResponseObject.html">JRA\Objects\Response\CategoryListResponseObject</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getCategoryById">#</a>
+			<code><a href="source-class-JRA.Facades.APIFacade.html#197-210" title="Go to source code">getCategoryById</a>( <span>integer <var>$pId</var></span> )</code>
+
+			<div class="description short">
+				<p>Get an single category by id.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Get an single category by id.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$pId</var></dt>
+						<dd>The category id to select this record.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-JRA.Objects.Response.CategoryListResponseObject.html">JRA\Objects\Response\CategoryListResponseObject</a></code><br>Returns the response in an functionality providing object.
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getAllContentFields" id="_getAllContentFields">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-JRA.Objects.Response.ContentFieldsResponseObject.html">JRA\Objects\Response\ContentFieldsResponseObject</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getAllContentFields">#</a>
+			<code><a href="source-class-JRA.Facades.APIFacade.html#212-224" title="Go to source code">getAllContentFields</a>( )</code>
+
+			<div class="description short">
+				<p>Get all database fields with the field configuration from an content.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Get all database fields with the field configuration from an content.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-JRA.Objects.Response.ContentFieldsResponseObject.html">JRA\Objects\Response\ContentFieldsResponseObject</a></code><br>Returns the response in an functionality providing object.
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="deleteContentById" id="_deleteContentById">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-JRA.Objects.Response.ContentResponseObject.html">JRA\Objects\Response\ContentResponseObject</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_deleteContentById">#</a>
+			<code><a href="source-class-JRA.Facades.APIFacade.html#226-239" title="Go to source code">deleteContentById</a>( <span>integer <var>$pId</var></span> )</code>
+
+			<div class="description short">
+				<p>Delete an content by id.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Delete an content by id.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$pId</var></dt>
+						<dd>The content id to delete this record.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-JRA.Objects.Response.ContentResponseObject.html">JRA\Objects\Response\ContentResponseObject</a></code><br>Returns the response in an functionality providing object.
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getContentById" id="_getContentById">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-JRA.Objects.Response.ContentResponseObject.html">JRA\Objects\Response\ContentResponseObject</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getContentById">#</a>
+			<code><a href="source-class-JRA.Facades.APIFacade.html#241-254" title="Go to source code">getContentById</a>( <span>integer <var>$pId</var></span> )</code>
+
+			<div class="description short">
+				<p>Get an single content by id.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Get an single content by id.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$pId</var></dt>
+						<dd>The content id to select this record.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-JRA.Objects.Response.ContentResponseObject.html">JRA\Objects\Response\ContentResponseObject</a></code><br>Returns the response in an functionality providing object.
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="createContent" id="_createContent">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-JRA.Objects.Response.MsgResponseObject.html">JRA\Objects\Response\MsgResponseObject</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_createContent">#</a>
+			<code><a href="source-class-JRA.Facades.APIFacade.html#256-271" title="Go to source code">createContent</a>( <span><code><a href="class-JRA.Objects.CreateContentObject.html">JRA\Objects\CreateContentObject</a></code> <var>$pContent</var></span> )</code>
+
+			<div class="description short">
+				<p>Create an content from an create content object.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Create an content from an create content object.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$pContent</var></dt>
+						<dd>The object with all information in it to create a content.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-JRA.Objects.Response.MsgResponseObject.html">JRA\Objects\Response\MsgResponseObject</a></code><br>Returns the response in an functionality providing object.
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="updateContentById" id="_updateContentById">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-JRA.Objects.Response.MsgResponseObject.html">JRA\Objects\Response\MsgResponseObject</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_updateContentById">#</a>
+			<code><a href="source-class-JRA.Facades.APIFacade.html#273-291" title="Go to source code">updateContentById</a>( <span><code><a href="class-JRA.Objects.UpdateContentObject.html">JRA\Objects\UpdateContentObject</a></code> <var>$pContent</var></span>, <span>integer <var>$pId</var></span> )</code>
+
+			<div class="description short">
+				<p>Update an content by an update content object.
+The id for updating the right content is inside the update content object.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Update an content by an update content object.
+The id for updating the right content is inside the update content object.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$pContent</var></dt>
+						<dd>The object with all information in it to update a content.</dd>
+						<dt><var>$pId</var></dt>
+						<dd>The content id of the content which should be updated.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-JRA.Objects.Response.MsgResponseObject.html">JRA\Objects\Response\MsgResponseObject</a></code><br>Returns the response in an functionality providing object.
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="loginToken" id="_loginToken">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-JRA.Objects.Response.JResponseObject.html">JRA\Objects\Response\JResponseObject</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_loginToken">#</a>
+			<code><a href="source-class-JRA.Facades.APIFacade.html#293-306" title="Go to source code">loginToken</a>( <span>string <var>$pToken</var></span> )</code>
+
+			<div class="description short">
+				<p>Make an login request with an token.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Make an login request with an token.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$pToken</var></dt>
+						<dd>The token for login at the cAPI.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-JRA.Objects.Response.JResponseObject.html">JRA\Objects\Response\JResponseObject</a></code><br>Returns the response in an functionality providing object.
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="loginUserCredentials" id="_loginUserCredentials">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-JRA.Objects.Response.UserLoginResponseObject.html">JRA\Objects\Response\UserLoginResponseObject</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_loginUserCredentials">#</a>
+			<code><a href="source-class-JRA.Facades.APIFacade.html#308-327" title="Go to source code">loginUserCredentials</a>( <span>string <var>$pUsername</var></span>, <span>string <var>$pPassword</var></span> )</code>
+
+			<div class="description short">
+				<p>Login with the user credentials.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Login with the user credentials.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$pUsername</var></dt>
+						<dd>The username which is used to login at the cAPI.</dd>
+						<dt><var>$pPassword</var></dt>
+						<dd>The password which is used to login at the cAPI.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-JRA.Objects.Response.UserLoginResponseObject.html">JRA\Objects\Response\UserLoginResponseObject</a></code><br>Returns the response in an functionality providing object.
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="logoutUserSession" id="_logoutUserSession">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-JRA.Objects.Response.UserLogoutResponseObject.html">JRA\Objects\Response\UserLogoutResponseObject</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_logoutUserSession">#</a>
+			<code><a href="source-class-JRA.Facades.APIFacade.html#329-348" title="Go to source code">logoutUserSession</a>( <span>string <var>$pUsername</var></span>, <span>string <var>$pSession</var></span> )</code>
+
+			<div class="description short">
+				<p>Logout an specified user session.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Logout an specified user session.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$pUsername</var></dt>
+						<dd>The username which is used to get the correct session.</dd>
+						<dt><var>$pSession</var></dt>
+						<dd>The password which is used to get the correct session.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-JRA.Objects.Response.UserLogoutResponseObject.html">JRA\Objects\Response\UserLogoutResponseObject</a></code><br>Returns the response in an functionality providing object.
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getCurrentUser" id="_getCurrentUser">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-JRA.Objects.Response.UserLogoutResponseObject.html">JRA\Objects\Response\UserLogoutResponseObject</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getCurrentUser">#</a>
+			<code><a href="source-class-JRA.Facades.APIFacade.html#350-362" title="Go to source code">getCurrentUser</a>( )</code>
+
+			<div class="description short">
+				<p>Get the current logged in user.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Get the current logged in user.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-JRA.Objects.Response.UserLogoutResponseObject.html">JRA\Objects\Response\UserLogoutResponseObject</a></code><br>Returns the response in an functionality providing object.
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+			</table>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		JRA, PHP cAPI interface API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

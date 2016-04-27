@@ -1,0 +1,21 @@
+source:
+  - ./src/JRA
+
+destination: ./docs
+
+accessLevels:
+  - public
+  - protected
+
+extensions:
+  - php
+
+groups: auto
+
+title: JRA, PHP cAPI interface
+
+tree: true
+
+version: true
+
+templateTheme: bootstrap
